@@ -161,13 +161,13 @@ class Command:
         x1,y1, x2,y2 = self.to_sel
         self.to_sel = None
         self.skip_caret = True
-        ed.set_sel_rect(x1, y1,  x2, y2)
+        ed.set_caret(x2, y2, x1, y1)
 
       elif self.triple_sel:
         if self.triple_sel[0] >= time.time()  or  ignore_time:
           x1,y1, x2,y2 = self.triple_sel[1:5]
           self.triple_sel = None # needs to be before set_sel_rect()
-          ed.set_sel_rect(x1, y1,  x2, y2)
+          ed.set_caret(x2, y2, x1, y1)
           
         self.triple_sel = None
         

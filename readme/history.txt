@@ -1,3 +1,6 @@
+2024.11.05
+- fix: plugin was making _column_ selection, it should be _normal_ selection (report by @Sukju22, fix by Alexey T.)
+
 2021.01.11
 + add: added plugin command + menu item in "Plugins/ Extend Selection"
 + add: refactored code
